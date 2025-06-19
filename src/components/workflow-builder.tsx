@@ -12,7 +12,6 @@ import PromptGenerationStep from "./steps/prompt-generation";
 import AvatarGenerationStep from "./steps/avatar-generation";
 import { QuizResult as QuizResultComponent } from "./quiz-result";
 import { QuizResult } from "@/types/quiz";
-import ThemeToggle from "./theme-toggle";
 
 interface WorkflowStep {
   id: string;
@@ -180,9 +179,6 @@ export default function WorkflowBuilder() {
 
     return (
       <div className="max-w-7xl mx-auto">
-        <div className="absolute top-4 right-4">
-          <ThemeToggle />
-        </div>
         <div className="fade-in">
           <QuizResultComponent 
             result={result}
@@ -196,9 +192,6 @@ export default function WorkflowBuilder() {
 
   return (
     <div className="max-w-7xl mx-auto">
-      <div className="absolute top-4 right-4">
-        <ThemeToggle />
-      </div>
       
       <div className="grid grid-cols-1 md:grid-cols-[300px_1fr] gap-8">
         {/* Workflow Steps */}
